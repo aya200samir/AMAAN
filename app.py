@@ -7,6 +7,12 @@ from textblob import TextBlob
 import plotly.graph_objects as go
 import os
 
+import nltk
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+
 # --- Page Configuration ---
 st.set_page_config(page_title="Aman Credit Scoring", layout="wide")
 
